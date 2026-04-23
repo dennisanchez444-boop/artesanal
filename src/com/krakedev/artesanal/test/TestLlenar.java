@@ -8,13 +8,13 @@ public class TestLlenar {
 		Maquina rub = new Maquina("Club","Cerveza de calidad",0.02,8000);
 		rub.imprimir();
 
-		rub.llenarmaquina();
+		rub.llenarMaquina();
 		
 		rub.imprimir();
 		
 		Maquina negra = new Maquina("Pilsaner","Alta calidad",0.03);
 		negra.imprimir();
-		negra.llenarmaquina();
+		negra.llenarMaquina();
 		negra .imprimir();
 	}
 

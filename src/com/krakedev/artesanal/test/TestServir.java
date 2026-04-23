@@ -9,7 +9,7 @@ public class TestServir {
 		System.out.println("------ESTADO INICIAL------");
 		rub.imprimir();
 		System.out.println("------LLENANDO MAQUINA------");
-		rub.llenarmaquina();
+		rub.llenarMaquina();
 		rub.imprimir();
 		System.out.println("------SERVIR 1000ML------");
 		double valor=rub.servirCerveza(1000);

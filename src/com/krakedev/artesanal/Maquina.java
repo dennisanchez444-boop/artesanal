@@ -7,6 +7,8 @@ public class Maquina {
 	private double capacidadMaxima;
 	private double capacidadActual;
 
+	public Maquina() {}
+	
 	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMaxima) {
 		super();
 		this.nombreCerveza = nombreCerveza;
@@ -25,7 +27,7 @@ public class Maquina {
 		this.capacidadActual = 0;
 	}
 
-	public void llenarmaquina() {
+	public void llenarMaquina() {
 		this.capacidadActual = this.capacidadMaxima - 100;
 	}
 

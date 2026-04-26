@@ -6,11 +6,13 @@ public class Maquina {
 	private double precioPorMl;
 	private double capacidadMaxima;
 	private double capacidadActual;
+	private double cantidadDesperdicio;
+	private String codigo;
 
-	public Maquina() {}
-	
+	public Maquina() {
+	}
+
 	public Maquina(String nombreCerveza, String descripcion, double precioPorMl, double capacidadMaxima) {
-		super();
 		this.nombreCerveza = nombreCerveza;
 		this.descripcion = descripcion;
 		this.precioPorMl = precioPorMl;
@@ -19,7 +21,15 @@ public class Maquina {
 	}
 
 	public Maquina(String nombreCerveza, String descripcion, double precioPorMl) {
-		super();
+		this.nombreCerveza = nombreCerveza;
+		this.descripcion = descripcion;
+		this.precioPorMl = precioPorMl;
+		this.capacidadMaxima = 10000;
+		this.capacidadActual = 0;
+	}
+
+	public Maquina(String codigo, String nombreCerveza, String descripcion, double precioPorMl) {
+		this.codigo = codigo;
 		this.nombreCerveza = nombreCerveza;
 		this.descripcion = descripcion;
 		this.precioPorMl = precioPorMl;
@@ -55,11 +65,21 @@ public class Maquina {
 		}
 	}
 
+	public void vaciarMaquina() {
+		this.cantidadDesperdicio = capacidadActual;
+		this.capacidadActual = 0;
+	}
+
 	public void imprimir() {
 		String mensaje;
 		mensaje = "Nombre cerveza:" + nombreCerveza + ", Descripcion: " + descripcion + ", Precio por Ml: "
-				+ precioPorMl + ", Capacidad Maxima: " + capacidadMaxima + ", Cantidad Actual: " + capacidadActual;
+				+ precioPorMl + ", Capacidad Maxima: " + capacidadMaxima + ", Cantidad Actual: " + capacidadActual
+				+ "Cantidad desperdicio" + cantidadDesperdicio;
 		System.out.println(mensaje);
+	}
+
+	public String getCodigo() {
+		return codigo;
 	}
 
 	public String getNombreCerveza() {
@@ -93,4 +113,13 @@ public class Maquina {
 	public double getCapacidadActual() {
 		return capacidadActual;
 	}
+
+	public double getCantidadDesperdicio() {
+		return cantidadDesperdicio;
+	}
+
+	public void setCantidadDesperdicio(double cantidadDesperdicio) {
+		this.cantidadDesperdicio = cantidadDesperdicio;
+	}
+
 }

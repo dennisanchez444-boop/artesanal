@@ -9,6 +9,7 @@ public class Cliente {
 	public Cliente(String nombre, String cedula) {
 		this.nombre = nombre;
 		this.cedula = cedula;
+		this.totalConsumido = 0;
 	}
 
 	public String getNombre() {
